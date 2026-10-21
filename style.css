@@ -8,3 +8,250 @@
 }
 
 /* START BELOW */
+/* IMPORT FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Merriweather&display=swap');
+
+/* WORDFALL COLOR PALETTE AND SPACING */
+
+:root {
+
+    --primary: #65784D;
+
+    --accent: #C98F9B;
+
+    --background: #F7F2E8;
+
+    --text: #352F29;
+
+    --spacing-unit: 8px;
+
+}
+
+/* BODY STYLING */
+
+body {
+
+    background-color: var(--background);
+
+    color: var(--text);
+
+    font-family: 'Merriweather', serif;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+
+}
+
+/* HEADINGS */
+
+h1,
+
+h2,
+
+h3 {
+
+    font-family: 'Cinzel Decorative', serif;
+
+    color: var(--text);
+
+    margin-bottom: 16px;
+
+}
+
+h1 {
+
+    font-size: 32px;
+
+}
+
+h2 {
+
+    font-size: 24px;
+
+}
+
+h3 {
+
+    font-size: 20px;
+
+}
+
+/* PARAGRAPHS */
+
+p {
+
+    margin-bottom: 16px;
+
+}
+
+/* HEADER */
+
+header {
+
+    background-color: var(--primary);
+
+    padding: 24px;
+
+    border-bottom: 2px solid var(--text);
+
+}
+
+/* MAIN CONTENT */
+
+main {
+
+    padding: 24px;
+
+}
+
+/* SECTIONS */
+
+section {
+
+    background-color: var(--background);
+
+    padding: 24px;
+
+    margin-bottom: 32px;
+
+    border: 1px solid var(--primary);
+
+}
+
+/* BUTTONS */
+
+button {
+
+    background-color: var(--primary);
+
+    color: var(--background);
+
+    font-family: 'Merriweather', serif;
+
+    font-size: 16px;
+
+    padding: 16px 24px;
+
+    border: 1px solid var(--text);
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    margin-bottom: 16px;
+
+}
+
+/* LINKS */
+
+a {
+
+    color: var(--primary);
+
+    font-family: 'Merriweather', serif;
+
+}
+
+/* ACCENT SECTIONS */
+
+#dialogue,
+
+#definition,
+
+#word-selection,
+
+#missing-word {
+
+    background-color: var(--accent);
+
+    padding: 24px;
+
+    border: 1px solid var(--text);
+
+}
+
+/* IMAGES */
+
+img {
+
+    max-width: 100%;
+
+    height: auto;
+
+} /* === WORDFALL GAME COLORS === */
+
+/* Main gameplay background */
+
+body:has(#forest) {
+
+    background-color: #65784D;
+
+}
+
+/* Forest environment */
+
+#forest {
+
+    background-color: #65784D;
+
+    border: none;
+
+}
+
+/* Dark green top bar */
+
+#forest::before {
+
+    content: "";
+
+    display: block;
+
+    background-color: #52632F;
+
+    height: 40px;
+
+    margin-bottom: 24px;
+
+}
+
+/* NPC dialogue bubble */
+
+#dialogue {
+
+    background-color: #F7F2E8;
+
+    color: #352F29;
+
+    border: none;
+
+    border-radius: 32px;
+
+    max-width: 320px;
+
+}
+
+/* Collectible words */
+
+.collectible-word {
+
+    background-color: #C98F9B;
+
+    color: #352F29;
+
+    border: none;
+
+    border-radius: 24px;
+
+}
+
+/* Word Collection button */
+
+#forest > button:first-of-type {
+
+    background-color: #52632F;
+
+    color: #F7F2E8;
+
+}
