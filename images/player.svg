@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -12 256 312" width="1024" height="1248">
+  <defs>
+    <!-- watercolor: wobbly edge + pigment pooling at edges + paper grain -->
+    <filter id="wc" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" seed="4" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="2.5" xChannelSelector="R" yChannelSelector="G" result="d"/>
+      <!-- blotchy wash variation -->
+      <feTurbulence type="fractalNoise" baseFrequency="0.06" numOctaves="3" seed="11" result="b"/>
+      <feColorMatrix in="b" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -0.6 0.4" result="ba"/>
+      <feComposite in="ba" in2="d" operator="in" result="bm"/>
+      <feBlend in="d" in2="bm" mode="multiply" result="d2"/>
+      <!-- darker rim where the paint dried -->
+      <feGaussianBlur in="d" stdDeviation="1.6" result="bl"/>
+      <feComposite in="d" in2="bl" operator="out" result="rim"/>
+      <feColorMatrix in="rim" type="matrix" values="0.55 0 0 0 0  0 0.55 0 0 0  0 0 0.55 0 0  0 0 0 0.8 0" result="rimd"/>
+      <feMerge result="m"><feMergeNode in="d2"/><feMergeNode in="rimd"/></feMerge>
+      <!-- fine paper grain -->
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" seed="2" result="g"/>
+      <feColorMatrix in="g" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -0.7 0.45" result="ga"/>
+      <feComposite in="ga" in2="m" operator="in" result="gm"/>
+      <feBlend in="m" in2="gm" mode="multiply"/>
+    </filter>
+    <!-- pencil line wobble -->
+    <filter id="pencil" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.08" numOctaves="2" seed="9" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+
+  <!-- ground shadow -->
+  <ellipse cx="128" cy="289" rx="50" ry="6" fill="#4a3f33" opacity="0.18"/>
+
+  <!-- ===== paint layer ===== -->
+  <g filter="url(#wc)">
+    <!-- shoes -->
+    <path d="M94 280 Q94 270 108 270 Q122 270 122 281 Q110 288 94 280 Z" fill="#8a4337"/>
+    <path d="M134 281 Q134 270 148 270 Q162 270 162 280 Q146 288 134 281 Z" fill="#8a4337"/>
+    <!-- legs -->
+    <rect x="106" y="256" width="14" height="18" fill="#7c818c"/>
+    <rect x="136" y="256" width="14" height="18" fill="#7c818c"/>
+    <!-- hands -->
+    <circle cx="80" cy="256" r="8" fill="#c9976a"/>
+    <circle cx="176" cy="256" r="8" fill="#c9976a"/>
+    <!-- cloak -->
+    <path d="M100 206 Q92 236 74 258 Q128 274 182 258 Q164 236 156 206 Z" fill="#94969b"/>
+    <!-- sleeves -->
+    <path d="M100 210 Q84 228 72 250 Q80 256 90 252 Q98 236 106 222 Z" fill="#87898f"/>
+    <path d="M156 210 Q172 228 184 250 Q176 256 166 252 Q158 236 150 222 Z" fill="#87898f"/>
+    <!-- lime trim -->
+    <path d="M126 208 L130 208 L130 268 L126 268 Z" fill="#a9c03a"/>
+    <path d="M75 256 Q128 271 181 256 L181 262 Q128 277 75 262 Z" fill="#a9c03a"/>
+    <path d="M73 248 Q81 254 91 250 L92 255 Q81 259 72 253 Z" fill="#a9c03a"/>
+    <path d="M183 248 Q175 254 165 250 L164 255 Q175 259 184 253 Z" fill="#a9c03a"/>
+    <rect x="102" y="232" width="12" height="4" rx="2" fill="#a9c03a"/>
+    <rect x="142" y="232" width="12" height="4" rx="2" fill="#a9c03a"/>
+
+    <!-- back hair -->
+    <path d="M66 150 Q60 206 86 216 L170 216 Q196 206 190 150 Z" fill="#e7a2b6"/>
+    <!-- face -->
+    <ellipse cx="128" cy="166" rx="54" ry="50" fill="#c9976a"/>
+    <!-- blush, soft ovals right under the eyes like the original -->
+    <ellipse cx="99" cy="197" rx="8.5" ry="4.5" fill="#f2aaa4" opacity="0.9"/>
+    <ellipse cx="161" cy="195" rx="6.5" ry="5" fill="#f2aaa4" opacity="0.9"/>
+    <!-- collar -->
+    <path d="M116 213 Q128 222 140 213 L138 221 Q128 229 118 221 Z" fill="#a9c03a"/>
+    <!-- wispy see-through bangs -->
+    <g fill="#eaa8bb" opacity="0.88">
+      <path d="M70 156 Q66 112 128 108 Q190 112 186 156 Q170 140 128 139 Q86 140 70 156 Z"/>
+      <path d="M80 142 Q88 152 90 168 Q96 150 104 140 Z"/>
+      <path d="M104 139 Q114 152 118 174 Q121 152 126 139 Z"/>
+      <path d="M128 139 Q133 156 135 176 Q141 152 152 139 Z"/>
+      <path d="M152 139 Q160 150 164 166 Q167 150 176 142 Z"/>
+    </g>
+    <!-- side locks -->
+    <path d="M70 148 Q62 190 80 212 Q90 190 86 160 Z" fill="#e39cb1"/>
+    <path d="M186 148 Q194 190 176 212 Q166 190 170 160 Z" fill="#e39cb1"/>
+
+    <!-- hat brim -->
+    <ellipse cx="128" cy="120" rx="102" ry="20" fill="#5e6a3a"/>
+    <!-- hat cone, tip bent -->
+    <path d="M78 116 Q92 74 108 44 Q118 22 146 12 Q166 6 178 -2 Q168 20 154 30 Q140 44 148 76 Q154 98 176 116 Q128 128 78 116 Z" fill="#6b7a43"/>
+    <!-- slight band shading -->
+    <path d="M82 108 Q128 120 172 108 L176 116 Q128 128 78 116 Z" fill="#56622f"/>
+  </g>
+
+  <!-- ===== eye + detail layer (crisp) ===== -->
+  <g filter="url(#pencil)">
+    <!-- tall, wide-set eyes copied from the painting -->
+    <ellipse cx="98" cy="175" rx="7.5" ry="15" fill="#fbf6ec" stroke="#2e2220" stroke-width="1.8"/>
+    <ellipse cx="160" cy="173" rx="7" ry="14.5" fill="#fbf6ec" stroke="#2e2220" stroke-width="1.8"/>
+    <!-- heavier line on the outer edge -->
+    <path d="M92 184 Q88 170 92 163 Q95 159 99 160" fill="none" stroke="#2e2220" stroke-width="3" stroke-linecap="round"/>
+    <path d="M155 182 Q151 168 155 161 Q158 158 162 159" fill="none" stroke="#2e2220" stroke-width="3" stroke-linecap="round"/>
+    <!-- glassy split pupils -->
+    <g fill="none" stroke="#2e2220" stroke-width="1.4" stroke-linecap="round">
+      <path d="M99 161 Q96 175 100 189"/>
+      <path d="M161 159 Q158 173 161 187"/>
+      <path d="M155 176 L160 174"/>
+    </g>
+    <path d="M93 169 L99 165 L98 176 Z" fill="#2e2220"/>
+    <path d="M157 184 Q161 180 164 184 Q161 188 157 184 Z" fill="#2e2220"/>
+  </g>
+
+  <!-- ===== pencil outlines ===== -->
+  <g filter="url(#pencil)" fill="none" stroke="#4a3934" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" opacity="0.85">
+    <path d="M94 280 Q94 270 108 270 Q122 270 122 281 Q110 288 94 280 Z"/>
+    <path d="M134 281 Q134 270 148 270 Q162 270 162 280 Q146 288 134 281 Z"/>
+    <path d="M106 258 V272 M120 258 V272 M136 258 V272 M150 258 V272"/>
+    
+    <path d="M98 214 Q92 236 74 258 Q128 274 182 258 Q164 236 158 214"/>
+    <path d="M100 210 Q84 228 72 250 Q80 256 90 252 Q98 236 106 222"/>
+    <path d="M156 210 Q172 228 184 250 Q176 256 166 252 Q158 236 150 222"/>
+    <path d="M128 226 V268"/>
+    
+    <path d="M84 200 Q96 216 128 216 Q160 216 172 200"/>
+    <g stroke="#a86a7c" stroke-width="1.2"><path d="M80 142 Q88 152 90 168 Q96 150 104 140"/><path d="M104 139 Q114 152 118 174 Q121 152 126 139"/><path d="M128 139 Q133 156 135 176 Q141 152 152 139"/><path d="M152 139 Q160 150 164 166 Q167 150 176 142"/></g>
+    <path d="M70 148 Q62 190 80 212 M186 148 Q194 190 176 212"/>
+    
+    <path d="M26 120 A102 20 0 0 0 230 120"/>
+    <path d="M26 120 Q40 106 80 102 M230 120 Q216 106 174 102"/>
+    <path d="M80 104 Q92 74 108 44 Q118 22 146 12 Q166 6 178 -2 Q168 20 154 30 Q140 44 148 76 Q154 98 174 104"/>
+  </g>
+</svg>
