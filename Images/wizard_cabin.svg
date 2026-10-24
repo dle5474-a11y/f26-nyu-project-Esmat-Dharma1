@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="1024" height="1024">
+  <defs>
+    <!-- wobbly hand-painted edges -->
+    <filter id="wobble" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="4" xChannelSelector="R" yChannelSelector="G" result="d"/>
+      <!-- paper/watercolor grain -->
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" seed="3" result="g"/>
+      <feColorMatrix in="g" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -0.9 0.55" result="ga"/>
+      <feComposite in="ga" in2="d" operator="in" result="gm"/>
+      <feBlend in="d" in2="gm" mode="multiply"/>
+    </filter>
+    <radialGradient id="glow" cx="50%" cy="55%" r="60%">
+      <stop offset="0" stop-color="#fff2b8"/>
+      <stop offset="0.6" stop-color="#ffcf6b"/>
+      <stop offset="1" stop-color="#e09a3e"/>
+    </radialGradient>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#ffd77a" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#ffd77a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- ground shadow -->
+  <ellipse cx="258" cy="446" rx="190" ry="22" fill="#3b3226" opacity="0.18"/>
+
+  <g filter="url(#wobble)" stroke="#3b2a20" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+
+    <!-- smoke -->
+    <g fill="#d9d6cf" stroke="#9c978d" stroke-width="2" opacity="0.85">
+      <circle cx="342" cy="152" r="10"/>
+      <circle cx="362" cy="136" r="13"/>
+      <circle cx="390" cy="120" r="16"/>
+      <circle cx="420" cy="104" r="12"/>
+    </g>
+
+    <!-- chimney (behind roof) -->
+    <path d="M318 290 L320 180 L348 177 L351 290 Z" fill="#8d8f93"/>
+    <path d="M313 182 L354 178 L354 167 L312 170 Z" fill="#6f7176"/>
+    <g fill="none" stroke="#5e6064" stroke-width="2">
+      <path d="M321 200 H348 M321 222 H349 M334 182 V200 M328 200 V222 M341 222 V244"/>
+    </g>
+    <!-- log walls -->
+    <path d="M150 290 L372 286 L376 432 L146 434 Z" fill="#8a5a3b"/>
+    <g fill="none" stroke="#5e3b24" stroke-width="2.5">
+      <path d="M149 312 Q260 308 373 309"/>
+      <path d="M148 336 Q260 333 374 333"/>
+      <path d="M148 360 Q260 357 374 357"/>
+      <path d="M147 384 Q260 381 375 381"/>
+      <path d="M147 408 Q260 405 375 406"/>
+    </g>
+    <!-- log ends poking out -->
+    <g fill="#c49a6c">
+      <ellipse cx="146" cy="301" rx="9" ry="11"/>
+      <ellipse cx="145" cy="324" rx="9" ry="11"/>
+      <ellipse cx="144" cy="348" rx="9" ry="11"/>
+      <ellipse cx="144" cy="372" rx="9" ry="11"/>
+      <ellipse cx="143" cy="396" rx="9" ry="11"/>
+      <ellipse cx="143" cy="420" rx="9" ry="11"/>
+      <ellipse cx="377" cy="298" rx="9" ry="11"/>
+      <ellipse cx="378" cy="321" rx="9" ry="11"/>
+      <ellipse cx="378" cy="345" rx="9" ry="11"/>
+      <ellipse cx="379" cy="369" rx="9" ry="11"/>
+      <ellipse cx="379" cy="393" rx="9" ry="11"/>
+      <ellipse cx="380" cy="418" rx="9" ry="11"/>
+    </g>
+    <g fill="none" stroke="#8a5a3b" stroke-width="1.5">
+      <circle cx="146" cy="301" r="4"/><circle cx="145" cy="324" r="4"/><circle cx="144" cy="348" r="4"/>
+      <circle cx="144" cy="372" r="4"/><circle cx="143" cy="396" r="4"/><circle cx="143" cy="420" r="4"/>
+      <circle cx="377" cy="298" r="4"/><circle cx="378" cy="321" r="4"/><circle cx="378" cy="345" r="4"/>
+      <circle cx="379" cy="369" r="4"/><circle cx="379" cy="393" r="4"/><circle cx="380" cy="418" r="4"/>
+    </g>
+
+    <!-- nailed-on patch board + crack (it's old!) -->
+    <path d="M300 388 L352 384 L353 400 L301 404 Z" fill="#a0714c" stroke-width="2.5"/>
+    <g fill="#3b2a20" stroke="none"><circle cx="306" cy="396" r="1.8"/><circle cx="347" cy="392" r="1.8"/></g>
+    <path d="M330 300 l-6 10 l5 6 l-4 9" fill="none" stroke="#4a2f1d" stroke-width="2"/>
+    <path d="M168 400 l8 4 l-3 6" fill="none" stroke="#4a2f1d" stroke-width="2"/>
+
+    <!-- stone foundation -->
+    <path d="M138 430 Q260 424 386 428 L388 446 Q260 452 136 448 Z" fill="#8d8f93"/>
+    <g fill="none" stroke="#5e6064" stroke-width="2">
+      <path d="M170 430 V448 M205 428 V450 M300 427 V450 M335 428 V449 M362 428 V447"/>
+    </g>
+
+    <!-- window glow halo -->
+    <circle cx="188" cy="345" r="44" fill="url(#halo)" stroke="none"/>
+    <!-- window -->
+    <path d="M166 324 L210 322 L211 366 L167 368 Z" fill="url(#glow)"/>
+    <path d="M188 323 V367 M166 345 H211" fill="none" stroke="#5e3b24" stroke-width="3.5"/>
+    <path d="M163 370 L214 367 L215 376 L162 378 Z" fill="#6b4329"/>
+    <!-- crooked shutter -->
+    <path d="M211 321 L226 324 L225 367 L211 366 Z" fill="#6f7d3a"/>
+
+    <!-- door -->
+    <path d="M232 432 L232 368 Q260 336 290 368 L291 432 Z" fill="#8e3b2e"/>
+    <g fill="none" stroke="#5f241b" stroke-width="2">
+      <path d="M252 352 V432 M271 352 V432"/>
+    </g>
+    <path d="M232 380 H252 M232 414 H252" fill="none" stroke="#3b3a3a" stroke-width="4"/>
+    <circle cx="281" cy="402" r="4" fill="#d9b44a"/>
+    <!-- little star carved in door -->
+    <path d="M261 372 l3 6 l6 1 l-5 4 l1 6 l-5 -3 l-5 3 l1 -6 l-5 -4 l6 -1 Z" fill="#d9b44a" stroke-width="1.5"/>
+
+    <!-- step -->
+    <path d="M224 432 L299 432 L302 446 L221 446 Z" fill="#a7a9ad"/>
+
+    <!-- lantern -->
+    <path d="M308 336 H326" fill="none" stroke-width="2.5"/>
+    <path d="M322 336 V346" fill="none" stroke-width="2"/>
+    <path d="M314 346 L330 346 L332 368 L312 368 Z" fill="#ffd77a"/>
+    <path d="M312 344 L332 344 L328 340 L316 340 Z" fill="#3b3a3a"/>
+    <path d="M311 368 H333" fill="none" stroke-width="3.5"/>
+
+    <!-- wizard-hat roof, tip bent over -->
+    <path d="M112 296
+             Q170 270 205 215
+             Q236 160 262 118
+             Q282 88 316 82
+             Q330 80 338 92
+             Q318 92 304 110
+             Q292 128 300 168
+             Q312 230 350 262
+             Q376 282 410 292
+             Q262 314 112 296 Z" fill="#6f7d3a"/>
+    <!-- shingle rows -->
+    <g fill="none" stroke="#4d5826" stroke-width="2.2">
+      <path d="M145 282 Q262 296 384 280"/>
+      <path d="M178 252 Q262 266 352 252"/>
+      <path d="M204 220 Q262 232 324 220"/>
+      <path d="M226 186 Q262 196 304 186"/>
+      <path d="M246 152 Q268 160 298 152"/>
+      <path d="M180 284 l6 -12 M222 290 l5 -14 M266 292 l2 -14 M310 289 l-1 -14 M352 284 l-3 -13"/>
+      <path d="M214 258 l5 -12 M262 262 l1 -12 M308 258 l-3 -12"/>
+      <path d="M236 226 l3 -11 M286 226 l-1 -11"/>
+    </g>
+    <!-- moss -->
+    <g fill="#9aab4a" stroke="none" opacity="0.9">
+      <path d="M130 292 Q150 278 172 286 Q160 298 130 292 Z"/>
+      <path d="M318 270 Q340 258 356 272 Q338 280 318 270 Z"/>
+      <path d="M236 200 Q250 190 262 200 Q250 206 236 200 Z"/>
+    </g>
+    <!-- patched shingles -->
+    <path d="M186 262 L214 258 L216 278 L188 281 Z" fill="#8a7a3e" stroke-width="2"/>
+    <path d="M190 268 L211 266" fill="none" stroke="#5f5428" stroke-width="1.5"/>
+    <!-- hat band, like the cloak trim -->
+    <path d="M118 297 Q262 316 406 293 L404 305 Q262 326 120 308 Z" fill="#b6c93c"/>
+    <!-- star charm on tip -->
+    <path d="M340 92 l4 9 l10 1 l-7 6 l2 10 l-9 -5 l-9 5 l2 -10 l-7 -6 l10 -1 Z" fill="#ffd77a" stroke-width="2"/>
+
+    <!-- mushrooms -->
+    <path d="M400 446 V430" fill="none" stroke="#e8dcc4" stroke-width="5"/>
+    <path d="M388 432 Q400 412 413 432 Z" fill="#b8473a"/>
+    <path d="M416 447 V438" fill="none" stroke="#e8dcc4" stroke-width="4"/>
+    <path d="M408 440 Q416 426 425 440 Z" fill="#b8473a"/>
+    <g fill="#f3ead7" stroke="none"><circle cx="396" cy="426" r="2"/><circle cx="404" cy="424" r="2"/><circle cx="416" cy="434" r="1.6"/></g>
+
+    <!-- grass tufts -->
+    <path d="M118 448 l4 -14 l3 12 l5 -16 l3 18" fill="none" stroke="#55622b" stroke-width="2.5"/>
+    <path d="M206 452 l3 -10 l3 8 l4 -12 l2 13" fill="none" stroke="#55622b" stroke-width="2.5"/>
+    <path d="M430 450 l3 -10 l3 8 l4 -12 l2 13" fill="none" stroke="#55622b" stroke-width="2.5"/>
+  </g>
+</svg>
