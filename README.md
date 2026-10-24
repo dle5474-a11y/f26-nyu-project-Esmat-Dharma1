@@ -73,3 +73,16 @@ A cold start takes **1–3 minutes**. Here's why:
 * **Your work is saved automatically.** Even if the Codespace stops, the files are stored on GitHub. You won't lose anything.  
 * **You get a fixed number of free hours per month** through the GitHub Student Developer Pack. A cold start uses some of those hours just booting up, so it's worth keeping one Codespace alive while you're actively working.  
 * **If you need to work offline,** you can always install VS Code and Git locally instead but it does take some set up — Codespaces is a convenience, not a requirement.
+
+## Assignment 6 — Dynamic Word Collection
+
+For this assignment, I used JavaScript to dynamically generate the word inventory for my Wordfall game.
+
+### Data
+I created an array of five word objects: Foggy, Broken, Dark, Hidden, and Glowing. Each object contains a name, definition, and category.
+
+### JavaScript Implementation
+I used a forEach() loop to go through the array and document.createElement() to create a button for each word. I then used textContent to display the word's name and appendChild() to add the buttons to the inventory container in my HTML.
+
+### Challenges
+One challenge was changing my original inventory from manually written HTML buttons to JavaScript-generated buttons. I needed to remove the original buttons and create an empty container so JavaScript could populate it. overall it was a lot of confusion having to go back anf fourth

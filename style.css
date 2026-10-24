@@ -355,3 +355,28 @@ body:has(#word-collection) {
     height: auto;
 
 }
+/* === WORDFALL INVENTORY TILES === */
+
+/* Space between inventory words */
+
+#content-container button {
+
+    background-color: var(--accent);
+
+    color: var(--text);
+
+    border: none;
+
+    border-radius: 0;
+
+    padding: 16px;
+
+    margin-right: 16px;
+
+    margin-bottom: 16px;
+
+    font-family: 'Merriweather', serif;
+
+    font-size: 16px;
+
+}
