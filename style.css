@@ -255,3 +255,82 @@ body:has(#forest) {
     color: #F7F2E8;
 
 }
+/* === WORD COLLECTION PAGE === */
+
+/* Green background outside the inventory */
+
+body:has(#word-collection) {
+
+    background-color: var(--primary);
+
+}
+
+/* Cream-colored Word Collection panel */
+
+#word-collection {
+
+    background-color: var(--background);
+
+    padding: 24px;
+
+    border: 1px solid var(--primary);
+
+}
+
+/* Pink description box */
+
+#word-collection > p {
+
+    background-color: var(--accent);
+
+    color: var(--text);
+
+    padding: 16px;
+
+    margin-bottom: 24px;
+
+}
+
+/* Pink inventory word buttons */
+
+#inventory button {
+
+    background-color: var(--accent);
+
+    color: var(--text);
+
+    border: none;
+
+    border-radius: 0;
+
+}
+
+/* Empty inventory slots */
+
+#inventory button:disabled {
+
+    background-color: var(--accent);
+
+    opacity: 0.6;
+
+}
+
+/* Cream inventory area */
+
+#inventory {
+
+    background-color: var(--background);
+
+    border: none;
+
+}
+
+/* Pink definition box */
+
+#definition {
+
+    background-color: var(--accent);
+
+    color: var(--text);
+
+}
