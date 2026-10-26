@@ -1,3 +1,5 @@
+/* IMPORT FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Merriweather&display=swap');
 /* === RESET === */
 *,
 *::before,
@@ -8,9 +10,7 @@
 }
 
 /* START BELOW */
-/* IMPORT FONTS */
 
-@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Merriweather&display=swap');
 
 /* WORDFALL COLOR PALETTE AND SPACING */
 
