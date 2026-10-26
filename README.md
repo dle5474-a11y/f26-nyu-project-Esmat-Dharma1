@@ -86,3 +86,17 @@ I used a forEach() loop to go through the array and document.createElement() to 
 
 ### Challenges
 One challenge was changing my original inventory from manually written HTML buttons to JavaScript-generated buttons. I needed to remove the original buttons and create an empty container so JavaScript could populate it. overall it was a lot of confusion having to go back anf fourth
+
+## Structure Audit — [today's date]
+
+**Fixed today:**
+- Updated the font to actualy be veiwed on the page 
+- took my imported fonts to the top of my CSS
+
+**Still missing (building before the layout assignment):**
+- [ differentiating links vs buttons and updating that to correctly link to different pages] 
+- [ making sure to use my varibales everywhere] 
+
+**One thing I couldn't figure out:**
+- before submitting assighemnt 5 I was having a hard time figuring out why my fonts were not working thanks for professor i was able to make that change. Also understnading the differences between buttons and links I always thought they go hand to hand
+That list is the first thing I'll look at when I grade your next assignment. It's also the first thing you should look at when you sit down to work.
