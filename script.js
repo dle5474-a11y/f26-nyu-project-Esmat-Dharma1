@@ -3,22 +3,23 @@
 const words = [
 
     {
+       name: "Foggy",
 
-        name: "Foggy",
+      definition: "Weather filled with thick mist.",
 
-        definition: "Weather filled with thick mist.",
+       category: "Weather",
 
-        category: "Weather"
-
+       pronunciation: "Fôgē"
     },
 
     {
-
         name: "Broken",
 
         definition: "Something that is damaged or no longer working.",
 
-        category: "Condition"
+        category: "Condition",
+        
+        pronunciation: "Brōkən"
 
     },
 
@@ -28,7 +29,9 @@ const words = [
 
         definition: "Having little or no light.",
 
-        category: "Environment"
+        category: "Environment",
+
+        pronunciation: "Därk"
 
     },
 
@@ -38,7 +41,9 @@ const words = [
 
         definition: "Something that cannot easily be seen.",
 
-        category: "Discovery"
+        category: "Discovery",
+
+        pronunciation: "Hid(ə)n"
 
     },
 
@@ -48,29 +53,56 @@ const words = [
 
         definition: "Producing a soft light.",
 
-        category: "Environment"
+        category: "Environment",
+
+         pronunciation: "GlōiNG"
+
 
     }
 
 ];
 // Find the inventory container in HTML
-
 const container = document.getElementById("content-container");
 
-// Go through each word in the array
+// Find the definition container in HTML
+const definitionContainer = document.getElementById("definition-content");
 
+// Go through each word in the array
 words.forEach(word => {
 
-    // Create a button
-
+    // Create a button for each word
     const button = document.createElement("button");
 
-    // Put the word's name inside the button
-
+    // Display the word's name
     button.textContent = word.name;
 
-    // Add the button to the inventory
+    // When the player clicks the button
+    button.addEventListener("click", () => {
 
+        // Clear the previous definition
+        definitionContainer.innerHTML = "";
+
+        // Create elements for the word information
+        const name = document.createElement("h3");
+        const pronunciation = document.createElement("p");
+        const category = document.createElement("p");
+        const definition = document.createElement("p");
+
+        // Add information from the array
+        name.textContent = word.name;
+        pronunciation.textContent = "Pronunciation: " + word.pronunciation;
+        category.textContent = "Category: " + word.category;
+        definition.textContent = word.definition;
+
+        // Display the information in the definition box
+definitionContainer.appendChild(definition);
+definitionContainer.appendChild(name);
+definitionContainer.appendChild(pronunciation);
+definitionContainer.appendChild(category);
+
+    });
+
+    // Add the button to the inventory
     container.appendChild(button);
 
 });

@@ -100,3 +100,15 @@ One challenge was changing my original inventory from manually written HTML butt
 **One thing I couldn't figure out:**
 - before submitting assighemnt 5 I was having a hard time figuring out why my fonts were not working thanks for professor i was able to make that change. Also understnading the differences between buttons and links I always thought they go hand to hand
 That list is the first thing I'll look at when I grade your next assignment. It's also the first thing you should look at when you sit down to work.
+### Figma Mockup
+
+[View my Wordfall Figma Mockup](https://www.figma.com/design/GRxZ0VxuXMWeqFewEfSPhx/DharmaEsmat_Assignment4_Mockups.pdf?node-id=0-1&t=yodpgYZJKVolfCM2-1)
+Weekly Update
+
+What I plan to work on next week:
+
+Next week, I want to focus on making Wordfall more interactive. Now that my Word Collection can display vocabulary words and their definitions using JavaScript, I want to explore how players can use those words to interact with NPCs and progress through the story. I also want to improve the positioning of my images so the game environment looks closer to my original Figma mockup.
+
+Questions I have:
+
+One question I have is how to connect the words players collect in their inventory to the dialogue choices they make when interacting with NPCs. I am also wondering how I can make the environment change based on those interactions, such as removing the fog from the pathway after the player selects the correct word.
