@@ -186,7 +186,7 @@ img {
 
 body:has(#forest) {
 
-    background-color: #65784D;
+    background-color: var(--primary);
 
 }
 
@@ -194,7 +194,7 @@ body:has(#forest) {
 
 #forest {
 
-    background-color: #65784D;
+    background-color: var(--primary);
 
     border: none;
 
@@ -208,7 +208,7 @@ body:has(#forest) {
 
     display: block;
 
-    background-color: #52632F;
+    background-color: var(--primary);
 
     height: 40px;
 
@@ -250,7 +250,7 @@ body:has(#forest) {
 
 #forest > button:first-of-type {
 
-    background-color: #52632F;
+    background-color: var(--primary);
 
     color: #F7F2E8;
 
@@ -379,4 +379,16 @@ body:has(#word-collection) {
 
     font-size: 16px;
 
+}
+/* START ADVENTURE LINK */
+.start-button {
+    display: inline-block;
+    background-color: var(--primary);
+    color: var(--background);
+    font-family: 'Merriweather', serif;
+    font-size: 16px;
+    padding: 16px 24px;
+    border: 1px solid var(--text);
+    border-radius: 8px;
+    text-decoration: none;
 }
