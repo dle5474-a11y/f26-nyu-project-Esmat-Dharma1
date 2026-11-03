@@ -87,7 +87,7 @@ I used a forEach() loop to go through the array and document.createElement() to 
 ### Challenges
 One challenge was changing my original inventory from manually written HTML buttons to JavaScript-generated buttons. I needed to remove the original buttons and create an empty container so JavaScript could populate it. overall it was a lot of confusion having to go back anf fourth
 
-## Structure Audit — [today's date]
+## Structure Audit — [10/30/26]
 
 **Fixed today:**
 - Updated the font to actualy be veiwed on the page 
@@ -103,7 +103,8 @@ That list is the first thing I'll look at when I grade your next assignment. It'
 ### Figma Mockup
 
 [View my Wordfall Figma Mockup](https://www.figma.com/design/GRxZ0VxuXMWeqFewEfSPhx/DharmaEsmat_Assignment4_Mockups.pdf?node-id=0-1&t=yodpgYZJKVolfCM2-1)
-Weekly Update
+
+### Weekly Update
 
 What I plan to work on next week:
 
@@ -113,7 +114,7 @@ Questions I have:
 
 One question I have is how to connect the words players collect in their inventory to the dialogue choices they make when interacting with NPCs. I am also wondering how I can make the environment change based on those interactions. 
 
-reflection for assighment 7 
+### Reflection for Assignment 7
 When comparing my original Figma mockup to my current website, I noticed a few differences in the layout. One intentional change I made was expanding the word-selection panel across the bottom of the screen. I preferred this version because the word choices are clearer, easier to read, and easier for players to select.
 
 Another difference I noticed was the placement of the NPC’s dialogue bubble. In my original mockup, the dialogue bubble was positioned closer to the character, while in my current website, it appears farther away. This is something I would like to improve as I continue working on the responsive layout.
