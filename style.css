@@ -1,5 +1,44 @@
 /* IMPORT FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Merriweather&display=swap');
+/* LAYOUT PLAN
+
+   Two-dimensional (using CSS Grid):
+
+   - Gameplay pages (Meet NPC, Explore, Choose Word, Story Continues):
+     Use a shared forest grid to arrange the cottage, pathway,
+     player character, NPC cat, and interactive elements.
+
+   - Meet NPC:
+     Position the NPC dialogue bubble above the cat character.
+
+   - Explore:
+     Position the collectible word within the forest environment.
+
+   - Choose Word:
+     Arrange the dialogue bubble and word-selection panel
+     within the forest environment.
+
+   - Story Continues:
+     Keep the NPC dialogue positioned near the cat character.
+
+   - Word Collection:
+     Arrange vocabulary words into rows and columns
+     using CSS Grid.
+
+   One-dimensional or fine as-is:
+
+   - Landing Page:
+     Wordfall title, story premise, Start Adventure link,
+     and How It Works section can remain vertically stacked.
+
+   - Word Collection:
+     Page heading, description, and definition section
+     can remain in normal document flow.
+
+   - NPC Dialogue:
+     Text inside dialogue bubbles can remain in normal flow.
+
+*/
 /* === RESET === */
 *,
 *::before,
@@ -391,4 +430,11 @@ body:has(#word-collection) {
     border: 1px solid var(--text);
     border-radius: 8px;
     text-decoration: none;
+}
+/* === ASSIGNMENT 7: PAGE GRID === */
+
+.page {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
 }
