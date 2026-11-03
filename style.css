@@ -438,3 +438,378 @@ body:has(#word-collection) {
     grid-template-columns: minmax(0, 1fr);
     gap: 24px;
 }
+/* Inventory: auto-fit grid lets word tiles form columns and wrap on smaller screens */
+#content-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 16px;
+}
+/* Meet NPC: named areas position the forest elements to match my desktop mockup */
+.meet-npc-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+    grid-template-areas:
+        "title title book"
+        ". . pathway"
+        ". player dialogue"
+        "cottage player npc"
+        ". . word";
+
+    gap: 24px;
+}
+
+/* Assign each element to its grid area */
+
+.meet-npc-grid h1 {
+    grid-area: title;
+}
+
+.meet-npc-grid .book-button {
+    grid-area: book;
+    justify-self: end;
+}
+
+.meet-npc-grid .pathway {
+    grid-area: pathway;
+    width: 100%;
+}
+
+.meet-npc-grid .cottage {
+    grid-area: cottage;
+    width: 100%;
+}
+
+.meet-npc-grid .player {
+    grid-area: player;
+    width: 120px;
+    justify-self: center;
+    align-self: end;
+}
+
+/* NPC: keep the cat smaller to match my Figma mockup */
+.meet-npc-grid .npc {
+    grid-area: npc;
+    justify-self: center;
+    align-self: end;
+    width: 120px;
+    padding: 8px;
+}
+
+/* Make the cat image smaller */
+.meet-npc-grid .npc img {
+    width: 80px;
+    height: auto;
+}
+
+/* Dialogue: align the speech bubble above the NPC */
+.meet-npc-grid #dialogue {
+    grid-area: dialogue;
+    align-self: end;
+    justify-self: center;
+    width: 100%;
+    max-width: 280px;
+}
+
+/* Foggy: place the collectible word near the foggy pathway */
+.meet-npc-grid .collectible-word {
+    grid-area: pathway;
+    justify-self: end;
+    align-self: end;
+    margin-bottom: 8px;
+}
+/* Explore: named areas arrange the pathway, characters, and collectible word */
+.explore-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+    grid-template-areas:
+        "title title book"
+        ". . pathway"
+        ". player word"
+        "cottage player npc";
+
+    gap: 24px;
+}
+
+/* Assign elements to their grid areas */
+
+.explore-grid h1 {
+    grid-area: title;
+}
+
+.explore-grid .book-button {
+    grid-area: book;
+    justify-self: end;
+}
+
+.explore-grid .pathway {
+    grid-area: pathway;
+    width: 100%;
+}
+
+.explore-grid .cottage {
+    grid-area: cottage;
+    width: 100%;
+    align-self: end;
+}
+
+.explore-grid .player {
+    grid-area: player;
+    width: 120px;
+    justify-self: center;
+    align-self: end;
+}
+
+.explore-grid .npc {
+    grid-area: npc;
+    justify-self: center;
+    align-self: end;
+    width: 120px;
+    padding: 8px;
+}
+
+.explore-grid .npc img {
+    width: 80px;
+    height: auto;
+}
+
+.explore-grid #missing-word {
+    grid-area: word;
+    justify-self: center;
+    align-self: start;
+}
+/* Explore: keep the collectible word small like my Figma mockup */
+.explore-grid #missing-word {
+    grid-area: pathway;
+    justify-self: end;
+    align-self: end;
+
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+/* Hide the instruction heading visually */
+.explore-grid #missing-word h2 {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+/* Make Foggy a small pink collectible */
+.explore-grid #missing-word button {
+    background-color: var(--accent);
+    color: var(--text);
+    border: none;
+    border-radius: 24px;
+    padding: 8px 16px;
+}
+/* Choose Word: named areas arrange the forest and word choices like my mockup */
+.choose-word-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+    grid-template-areas:
+        "title title book"
+        ". . pathway"
+        ". . dialogue"
+        "cottage player npc"
+        "choices choices choices";
+
+    gap: 24px;
+}
+
+/* Assign elements to their grid areas */
+
+.choose-word-grid h1 {
+    grid-area: title;
+}
+
+.choose-word-grid > a {
+    grid-area: book;
+    justify-self: end;
+}
+
+.choose-word-grid .pathway {
+    grid-area: pathway;
+    width: 100%;
+}
+
+.choose-word-grid .cottage {
+    grid-area: cottage;
+    width: 100%;
+    align-self: end;
+}
+
+.choose-word-grid .player {
+    grid-area: player;
+    width: 120px;
+    justify-self: center;
+    align-self: end;
+}
+
+.choose-word-grid .npc {
+    grid-area: npc;
+    width: 120px;
+    padding: 8px;
+    justify-self: center;
+    align-self: end;
+}
+
+.choose-word-grid .npc img {
+    width: 80px;
+    height: auto;
+}
+
+.choose-word-grid #dialogue {
+    grid-area: dialogue;
+    justify-self: center;
+    align-self: end;
+    width: 100%;
+    max-width: 280px;
+}
+
+.choose-word-grid #word-selection {
+    grid-area: choices;
+}
+/* Choose Word: named areas arrange the forest and word choices like my mockup */
+.choose-word-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+    grid-template-areas:
+        "title title book"
+        ". . pathway"
+        ". . dialogue"
+        "cottage player npc"
+        "choices choices choices";
+
+    gap: 24px;
+}
+
+/* Assign elements to their grid areas */
+
+.choose-word-grid h1 {
+    grid-area: title;
+}
+
+.choose-word-grid > a {
+    grid-area: book;
+    justify-self: end;
+}
+
+.choose-word-grid .pathway {
+    grid-area: pathway;
+    width: 100%;
+}
+
+.choose-word-grid .cottage {
+    grid-area: cottage;
+    width: 100%;
+    align-self: end;
+}
+
+.choose-word-grid .player {
+    grid-area: player;
+    width: 120px;
+    justify-self: center;
+    align-self: end;
+}
+
+.choose-word-grid .npc {
+    grid-area: npc;
+    width: 120px;
+    padding: 8px;
+    justify-self: center;
+    align-self: end;
+}
+
+.choose-word-grid .npc img {
+    width: 80px;
+    height: auto;
+}
+
+.choose-word-grid #dialogue {
+    grid-area: dialogue;
+    justify-self: center;
+    align-self: end;
+    width: 100%;
+    max-width: 280px;
+}
+
+.choose-word-grid #word-selection {
+    grid-area: choices;
+}
+/* Story Continues: named areas arrange the restored forest and final NPC dialogue */
+.story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    grid-template-areas:
+        "title title book"
+        ". . pathway"
+        ". . dialogue"
+        "cottage player npc";
+
+    gap: 24px;
+}
+
+/* Assign elements to their grid areas */
+
+.story-grid h1 {
+    grid-area: title;
+}
+
+.story-grid .book-button {
+    grid-area: book;
+    justify-self: end;
+}
+
+.story-grid .pathway {
+    grid-area: pathway;
+    width: 100%;
+}
+
+.story-grid .cottage {
+    grid-area: cottage;
+    width: 100%;
+    align-self: end;
+}
+
+.story-grid .player {
+    grid-area: player;
+    width: 120px;
+    justify-self: center;
+    align-self: end;
+}
+
+.story-grid .npc {
+    grid-area: npc;
+    width: 120px;
+    padding: 8px;
+    justify-self: center;
+    align-self: end;
+}
+
+.story-grid .npc img {
+    width: 80px;
+    height: auto;
+}
+
+.story-grid #dialogue {
+    grid-area: dialogue;
+    justify-self: center;
+    align-self: end;
+    width: 100%;
+    max-width: 280px;
+}
