@@ -613,21 +613,37 @@ body:has(#word-collection) {
     padding: 8px 16px;
 }
 /* Choose Word: named areas arrange the forest and word choices like my mockup */
+/* Mobile: arrange the forest into two columns */
 .choose-word-grid {
     display: grid;
-
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 
     grid-template-areas:
-        "title title book"
-        ". . pathway"
-        ". . dialogue"
-        "cottage player npc"
-        "choices choices choices";
+        "title book"
+        "pathway pathway"
+        "dialogue dialogue"
+        "cottage cottage"
+        "player npc"
+        "choices choices";
 
-    gap: 24px;
+    gap: 16px;
 }
 
+/* Desktop: restore the three-column forest layout */
+@media (min-width: 768px) {
+    .choose-word-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+
+        grid-template-areas:
+            "title title book"
+            ". . pathway"
+            ". . dialogue"
+            "cottage player npc"
+            "choices choices choices";
+
+        gap: 24px;
+    }
+}
 /* Assign elements to their grid areas */
 
 .choose-word-grid h1 {
@@ -644,10 +660,19 @@ body:has(#word-collection) {
     width: 100%;
 }
 
+/* Mobile: keep the cottage from becoming too large */
 .choose-word-grid .cottage {
     grid-area: cottage;
     width: 100%;
+    max-width: 200px;
+    justify-self: center;
     align-self: end;
+}
+/* Desktop: allow the cottage to grow within its Grid column */
+@media (min-width: 768px) {
+    .choose-word-grid .cottage {
+        max-width: none;
+    }
 }
 
 .choose-word-grid .player {
@@ -681,21 +706,7 @@ body:has(#word-collection) {
 .choose-word-grid #word-selection {
     grid-area: choices;
 }
-/* Choose Word: named areas arrange the forest and word choices like my mockup */
-.choose-word-grid {
-    display: grid;
 
-    grid-template-columns: 1fr 1fr 1fr;
-
-    grid-template-areas:
-        "title title book"
-        ". . pathway"
-        ". . dialogue"
-        "cottage player npc"
-        "choices choices choices";
-
-    gap: 24px;
-}
 
 /* Assign elements to their grid areas */
 
@@ -711,12 +722,6 @@ body:has(#word-collection) {
 .choose-word-grid .pathway {
     grid-area: pathway;
     width: 100%;
-}
-
-.choose-word-grid .cottage {
-    grid-area: cottage;
-    width: 100%;
-    align-self: end;
 }
 
 .choose-word-grid .player {
@@ -747,8 +752,30 @@ body:has(#word-collection) {
     max-width: 280px;
 }
 
+/* Mobile: stack word choices vertically */
+/* DESIGN DEVIATION:
+   My original mockup placed the word choices in a smaller
+   panel near the player. I expanded the panel across the
+   bottom of the forest to give each choice more space
+   and make the buttons easier to select.
+*/
 .choose-word-grid #word-selection {
     grid-area: choices;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+/* Keep the question above all three word choices */
+.choose-word-grid #word-selection h2 {
+    grid-column: 1 / -1;
+}
+
+/* Desktop: arrange word choices in three columns */
+@media (min-width: 768px) {
+    .choose-word-grid #word-selection {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 /* Story Continues: named areas arrange the restored forest and final NPC dialogue */
 .story-grid {

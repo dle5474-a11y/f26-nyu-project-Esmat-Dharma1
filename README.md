@@ -111,4 +111,9 @@ Next week, I want to focus on making Wordfall more interactive. Now that my Word
 
 Questions I have:
 
-One question I have is how to connect the words players collect in their inventory to the dialogue choices they make when interacting with NPCs. I am also wondering how I can make the environment change based on those interactions, such as removing the fog from the pathway after the player selects the correct word.
+One question I have is how to connect the words players collect in their inventory to the dialogue choices they make when interacting with NPCs. I am also wondering how I can make the environment change based on those interactions. 
+
+reflection for assighment 7 
+When comparing my original Figma mockup to my current website, I noticed a few differences in the layout. One intentional change I made was expanding the word-selection panel across the bottom of the screen. I preferred this version because the word choices are clearer, easier to read, and easier for players to select.
+
+Another difference I noticed was the placement of the NPC’s dialogue bubble. In my original mockup, the dialogue bubble was positioned closer to the character, while in my current website, it appears farther away. This is something I would like to improve as I continue working on the responsive layout.
