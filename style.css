@@ -192,6 +192,12 @@ a {
     font-family: 'Merriweather', serif;
 
 }
+/* Flexbox: center the Start Adventure text inside its link */
+a.start-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /* ACCENT SECTIONS */
 
