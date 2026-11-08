@@ -1,3 +1,38 @@
+# [Wordfall]
+
+**Latest mockups:** [link]
+**Live site:** [link, once published]
+
+## Project Log
+Week 8 — November 8, 2026
+
+### Week 8 — [11/8/26]
+
+**State Plan**
+- **User story:** 
+     As a middle school student with dyslexia, I want to interact with words I discover while exploring so that I can collect them and use them to progress through the story.
+- **What does the page remember?** 
+     Whether the player has collected the missing word.
+- **What does it start at?**
+        The word starts as not collected (false).
+- **What changes it?**
+    When the player clicks the button to collect the word, the state changes from false to true.
+- **What does the user see?**
+     Once the player collects the word, it appears in their Word Collection, and a message confirms that the word has been collected. user will also see a change of the screens inviorment 
+- **What does the `if/else` decide?** 
+        It checks whether the word has already been collected. If it hasn’t, the player can collect it. If it has, the game tells the player they already have that word.
+
+**What changed:**
+**What was hard, and what I tried:**
+**What happened when I tried to break it:**
+**What I learned or changed my mind about:**
+**Question for Joey:**
+**Next week's goal:**
+**AI use:**
+I used ChatGPT to help me with grammatical and spelling errors and also used it to help me trouble shoot codes that are not working 
+
+
+
 ## **Instructions**
 
 ### **Step-by-Step: Getting Set Up**
