@@ -72,6 +72,8 @@ const container = document.getElementById("content-container");
 const definitionContainer = document.getElementById("definition-content");
 
 // Go through each word in the array
+if (container && definitionContainer) {
+
 words.forEach(word => {
 
     // Create a button for each word
@@ -110,3 +112,4 @@ definitionContainer.appendChild(category);
     container.appendChild(button);
 
 });
+}
