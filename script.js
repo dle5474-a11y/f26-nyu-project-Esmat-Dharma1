@@ -1,4 +1,6 @@
 console.log("script.js is connected");
+// wordCollected: remembers whether the player has collected the missing word to restore the story
+let wordCollected = false;
 
 // Wordfall Word Collection Data
 
