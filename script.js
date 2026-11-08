@@ -1,3 +1,5 @@
+console.log("script.js is connected");
+
 // Wordfall Word Collection Data
 
 const words = [
