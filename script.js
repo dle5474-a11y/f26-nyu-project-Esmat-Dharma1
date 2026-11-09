@@ -113,14 +113,26 @@ definitionContainer.appendChild(category);
 
 });
 }
-// Find the Foggy button on the NPC page
+// Find the Foggy button and collection message
 const foggyButton = document.getElementById("collect-foggy");
+const collectionMessage = document.getElementById("collection-message");
 
-if (foggyButton) {
+if (foggyButton && collectionMessage) {
 
     foggyButton.addEventListener("click", () => {
 
-        wordCollected = true;
+        if (wordCollected === false) {
+
+            wordCollected = true;
+
+            foggyButton.textContent = "✓ Foggy Collected";
+            collectionMessage.textContent = "You collected Foggy!";
+
+        } else {
+
+            collectionMessage.textContent = "You already collected Foggy!";
+
+        }
 
         console.log("wordCollected:", wordCollected);
 
