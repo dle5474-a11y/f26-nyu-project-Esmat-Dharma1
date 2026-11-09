@@ -113,3 +113,17 @@ definitionContainer.appendChild(category);
 
 });
 }
+// Find the Foggy button on the NPC page
+const foggyButton = document.getElementById("collect-foggy");
+
+if (foggyButton) {
+
+    foggyButton.addEventListener("click", () => {
+
+        wordCollected = true;
+
+        console.log("wordCollected:", wordCollected);
+
+    });
+
+}
