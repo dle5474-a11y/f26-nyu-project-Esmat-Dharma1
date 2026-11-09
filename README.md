@@ -23,11 +23,21 @@ Week 8 — November 8, 2026
         It checks whether the word has already been collected. If it hasn’t, the player can collect it. If it has, the game tells the player they already have that word.
 
 **What changed:**
+  I added JavaScript state to make Wordfall more interactive. Players can now click on the word “Foggy” when they meet the NPC, and the game remembers that the word has been collected. I used a Boolean variable and an if/else statement to change the button’s text and display different messages depending on whether the player has already collected the word.
 **What was hard, and what I tried:**
+One challenge was figuring out how to connect my JavaScript to different HTML pages without breaking my existing Word Collection. At first, I realized that my script was only connected to the Word Collection page and not the NPC page I added the script connection and used an if statement to make sure the Word Collection code only runs when the necessary HTML elements exist.
 **What happened when I tried to break it:**
+I tested my word-collection interaction at three different points: before collecting the word, after collecting it once, and after clicking it repeatedly. The starting state worked correctly, with Foggy appearing as an uncollected word. After clicking it, the button changed to “Foggy Collected,” and the page displayed a confirmation message.
+
+When I clicked the button multiple times, the game recognized that Foggy had already been collected and displayed a different message. This prevented the interaction from counting the same word multiple times.
+
+One limitation I identified was that the collected state resets when the player refreshes or leaves the page. The Word Collection inventory also doesn’t yet reflect the player’s action. I would like to address this in a future iteration so that collected words remain available as players progress through the story. also the collected message appears near the top of the screen rather then underneath the button
 **What I learned or changed my mind about:**
+its makes it more compplicated to make interaction when you have many html files and making sure everything is effected by the one interaction 
 **Question for Joey:**
+just inntitial thoughts on what I can refine 
 **Next week's goal:**
+I want to add a interaction where when you click on the cat the speach bubble pops up
 **AI use:**
 I used ChatGPT to help me with grammatical and spelling errors and also used it to help me trouble shoot codes that are not working 
 
