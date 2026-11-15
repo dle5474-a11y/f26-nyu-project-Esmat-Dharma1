@@ -1,7 +1,7 @@
-# [Wordfall]
+# Wordfall
 
-**Latest mockups:** [link]
-**Live site:** [link, once published]
+**Latest mockups:** https://www.figma.com/design/GRxZ0VxuXMWeqFewEfSPhx/DharmaEsmat_Assignment4_Mockups.pdf?node-id=0-1&t=taWvDZ1c32jbhtnM-1
+**Live site:** https://special-palm-tree-775prq97wg953xp4j-5500.app.github.dev/
 
 ## Project Log
 Week 8 — November 8, 2026
