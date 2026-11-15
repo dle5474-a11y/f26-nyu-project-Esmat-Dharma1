@@ -465,7 +465,21 @@ body:has(#word-collection) {
 
     gap: 24px;
 }
+.meet-npc-grid #collection-message {
+    grid-area: pathway;
+    align-self: end;
+    justify-self: start;
+    background-color: var(--accent);
+    color: var(--text);
+    padding: 4px 12px;
+    border-radius: 24px;
+    transform: translateY(-50px);
+    max-width: 180px;
+}
 
+.meet-npc-grid #collection-message:empty {
+    display: none;
+}
 /* Assign each element to its grid area */
 
 .meet-npc-grid h1 {
