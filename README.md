@@ -4,6 +4,26 @@
 **Live site:** https://special-palm-tree-775prq97wg953xp4j-5500.app.github.dev/
 
 ## Project Log
+
+### Week 9 — [11/15/26]
+
+**Render Plan**
+- **User story:** As a middle-school student with dyslexia, I want to use information I discover while reading so that I can interact with the story and improve my reading comprehension.
+- **State:** The page remembers whether the player has collected the word Foggy using wordCollected. It starts as false. The other four vocabulary words are treated as already collected.
+- **What changes it:** When the player clicks the Collect Foggy button, wordCollected changes from false to true. Clicking the button again will not collect the word twice.
+- **What render() draws:** The render() function will loop through my existing words array from Assignment 6 and display the collection status of each vocabulary word.
+- **The if inside the loop:** For each word, an if statement will check whether it has been collected. Foggy will initially appear uncollected, while the other four words will appear collected. Once Foggy is collected, its status will change.
+- **What else render() works out:** The function will calculate the number of collected words and display the progress. The count will start at 4/5 and change to 5/5 after collecting Foggy. It will also update the collection message.
+
+**What changed:**
+**Patching vs. rendering:** In 2–3 sentences, what was different about your interaction before and after this week?
+**What was hard, and what I tried:**
+**What happened when I tried to break it:**
+**What I learned or changed my mind about:**
+**Question for Joey:**
+**Next week's goal:**
+**AI use: I used ChatGPT to help me understand how the render() function can connect my existing vocabulary array and collection state.
+
 Week 8 — November 8, 2026
 
 ### Week 8 — [11/8/26]
@@ -163,3 +183,5 @@ One question I have is how to connect the words players collect in their invento
 When comparing my original Figma mockup to my current website, I noticed a few differences in the layout. One intentional change I made was expanding the word-selection panel across the bottom of the screen. I preferred this version because the word choices are clearer, easier to read, and easier for players to select.
 
 Another difference I noticed was the placement of the NPC’s dialogue bubble. In my original mockup, the dialogue bubble was positioned closer to the character, while in my current website, it appears farther away. This is something I would like to improve as I continue working on the responsive layout.
+
+
