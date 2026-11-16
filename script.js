@@ -71,6 +71,10 @@ const container = document.getElementById("content-container");
 // Find the definition container in HTML
 const definitionContainer = document.getElementById("definition-content");
 
+// render: draws vocabulary words and their collection status, plus the progress count
+function render() { 
+
+
 // Go through each word in the array
 if (container && definitionContainer) {
 
@@ -112,6 +116,9 @@ definitionContainer.appendChild(category);
     container.appendChild(button);
 
 });
+}
+// Close the render function
+
 }
 // Find the Foggy button and collection message
 const foggyButton = document.getElementById("collect-foggy");
