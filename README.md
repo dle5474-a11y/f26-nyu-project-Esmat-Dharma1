@@ -14,16 +14,14 @@
 - **What render() draws:** The function loops through my existing words array and displays the five vocabulary buttons and the selected word’s definition.
 - **The if inside the loop:** It checks whether each word matches selectedWord. If it matches, that button receives a selected style.
 - **What else render() works out:** The definition panel updates to show the selected word’s name, pronunciation, category, and definition.
-**What changed:**
-**Patching vs. rendering:** In 2–3 sentences, what was different about your interaction before and after this week?
-**What was hard, and what I tried:**
-**What happened when I tried to break it:**
-**What I learned or changed my mind about:**
-**Question for Joey:**
+**What changed:** I reorganized my Word Collection interaction using a render() function. Instead of having the click handler directly update the definition panel, it now changes the selected word, and render() updates the vocabulary buttons and definition. I also added a dark green highlight to show which word is currently selected.
+**Patching vs. rendering:** Previously, my click handler directly changed the HTML whenever a player selected a vocabulary word. Now, the click handler only updates selectedWord and calls render(), which redraws the vocabulary buttons and definition based on the current state. This makes the interaction more consistent and prevents duplicate information from appearing.
+**What was hard, and what I tried:** One challenge was getting the selected vocabulary button to change color. My existing CSS rule for the inventory buttons was overriding the new selected style. I fixed this by using a more specific CSS selector, #content-container button.selected, while keeping my original color palette.
+**What happened when I tried to break it:** I tested the starting state, clicked different vocabulary words, clicked Broken ten times, and selected words in an unexpected order. The selected button continued to highlight correctly, and the definition panel displayed the corresponding word without duplicating information. The interaction remained consistent throughout testing.
+**What I learned or changed my mind about:** I originally planned to add a collection progress counter, but I realized that improving my existing vocabulary selection interaction would be more useful. I learned that using state and render() can make an interaction more organized without needing to add unnecessary visual features. eventually also using localstorage
+**Question for Joey:** Could I have used the cat npc interaction for this assighement I saw your notes for me last week but my cat directly does not involve assighement 6 like the directions say. 
 **Next week's goal:** updating cat speach bubble and having the CSS be changed where the speach bubble is closer to the cat
-**AI use: I used ChatGPT to help me understand how the render() function can connect my existing vocabulary array and collection state.
-
-Week 8 — November 8, 2026
+**AI use: I used ChatGPT to help me troubleshoot CSS problems. 
 
 ### Week 8 — [11/8/26]
 
