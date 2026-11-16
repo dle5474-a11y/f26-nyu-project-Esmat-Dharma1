@@ -9,19 +9,18 @@
 
 **Render Plan**
 - **User story:** As a middle-school student with dyslexia, I want to use information I discover while reading so that I can interact with the story and improve my reading comprehension.
-- **State:** The page remembers whether the player has collected the word Foggy using wordCollected. It starts as false. The other four vocabulary words are treated as already collected.
-- **What changes it:** When the player clicks the Collect Foggy button, wordCollected changes from false to true. Clicking the button again will not collect the word twice.
-- **What render() draws:** The render() function will loop through my existing words array from Assignment 6 and display the collection status of each vocabulary word.
-- **The if inside the loop:** For each word, an if statement will check whether it has been collected. Foggy will initially appear uncollected, while the other four words will appear collected. Once Foggy is collected, its status will change.
-- **What else render() works out:** The function will calculate the number of collected words and display the progress. The count will start at 4/5 and change to 5/5 after collecting Foggy. It will also update the collection message.
-
+- **State:** The page remembers which vocabulary word the player has selected using selectedWord. It starts as null, meaning no word is selected.
+- **What changes it:** Clicking a vocabulary button changes selectedWord to that word’s name.
+- **What render() draws:** The function loops through my existing words array and displays the five vocabulary buttons and the selected word’s definition.
+- **The if inside the loop:** It checks whether each word matches selectedWord. If it matches, that button receives a selected style.
+- **What else render() works out:** The definition panel updates to show the selected word’s name, pronunciation, category, and definition.
 **What changed:**
 **Patching vs. rendering:** In 2–3 sentences, what was different about your interaction before and after this week?
 **What was hard, and what I tried:**
 **What happened when I tried to break it:**
 **What I learned or changed my mind about:**
 **Question for Joey:**
-**Next week's goal:**
+**Next week's goal:** updating cat speach bubble and having the CSS be changed where the speach bubble is closer to the cat
 **AI use: I used ChatGPT to help me understand how the render() function can connect my existing vocabulary array and collection state.
 
 Week 8 — November 8, 2026
