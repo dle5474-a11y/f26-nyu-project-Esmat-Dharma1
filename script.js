@@ -2,6 +2,9 @@ console.log("script.js is connected");
 // wordCollected: remembers whether the player has collected the missing word to restore the story
 let wordCollected = false;
 
+// selectedWord remembers which vocabulary word the player is viewing
+let selectedWord = null;
+
 // Wordfall Word Collection Data
 
 const words = [
@@ -71,10 +74,21 @@ const container = document.getElementById("content-container");
 // Find the definition container in HTML
 const definitionContainer = document.getElementById("definition-content");
 
+
 // render: draws vocabulary words and their collection status, plus the progress count
 function render() { 
 
+// Clear the old vocabulary buttons before redrawing
+if (container) {
+    container.innerHTML = "";
+}
+// Clear the previous definition
 
+if (definitionContainer) {
+
+    definitionContainer.innerHTML = "";
+
+}
 // Go through each word in the array
 if (container && definitionContainer) {
 
@@ -85,30 +99,34 @@ words.forEach(word => {
 
     // Display the word's name
     button.textContent = word.name;
+    // Highlight the word the player selected
+if (selectedWord === word.name) {
+    button.classList.add("selected");
 
+    // Display the selected word's information
+    const name = document.createElement("h3");
+    const pronunciation = document.createElement("p");
+    const category = document.createElement("p");
+    const definition = document.createElement("p");
+
+    name.textContent = word.name;
+    pronunciation.textContent = "Pronunciation: " + word.pronunciation;
+    category.textContent = "Category: " + word.category;
+    definition.textContent = word.definition;
+
+    definitionContainer.appendChild(definition);
+    definitionContainer.appendChild(name);
+    definitionContainer.appendChild(pronunciation);
+    definitionContainer.appendChild(category);
+}
     // When the player clicks the button
     button.addEventListener("click", () => {
+// Remember which word the player selected
+selectedWord = word.name;
 
-        // Clear the previous definition
-        definitionContainer.innerHTML = "";
-
-        // Create elements for the word information
-        const name = document.createElement("h3");
-        const pronunciation = document.createElement("p");
-        const category = document.createElement("p");
-        const definition = document.createElement("p");
-
-        // Add information from the array
-        name.textContent = word.name;
-        pronunciation.textContent = "Pronunciation: " + word.pronunciation;
-        category.textContent = "Category: " + word.category;
-        definition.textContent = word.definition;
-
-        // Display the information in the definition box
-definitionContainer.appendChild(definition);
-definitionContainer.appendChild(name);
-definitionContainer.appendChild(pronunciation);
-definitionContainer.appendChild(category);
+// Redraw the page based on the selected word
+render();
+       
 
     });
 
@@ -120,6 +138,8 @@ definitionContainer.appendChild(category);
 // Close the render function
 
 }
+// Draw the vocabulary when the page first loads
+render();
 // Find the Foggy button and collection message
 const foggyButton = document.getElementById("collect-foggy");
 const collectionMessage = document.getElementById("collection-message");
