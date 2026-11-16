@@ -861,7 +861,7 @@ body:has(#word-collection) {
     max-width: 280px;
 }
 /* Highlight the vocabulary word currently selected */
-button.selected {
+#content-container button.selected {
     background-color: var(--primary);
     color: var(--background);
 }
