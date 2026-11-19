@@ -75,7 +75,7 @@ const container = document.getElementById("content-container");
 const definitionContainer = document.getElementById("definition-content");
 
 
-// render: draws vocabulary words and their collection status, plus the progress count
+// render: draws the vocabulary buttons, highlights the selected word, and shows its details
 function render() { 
 
 // Clear the old vocabulary buttons before redrawing
@@ -145,19 +145,33 @@ const foggyButton = document.getElementById("collect-foggy");
 const collectionMessage = document.getElementById("collection-message");
 
 if (foggyButton && collectionMessage) {
+    // Track whether the player tried collecting Foggy again
+let alreadyCollectedClicked = false;
+// Update the Foggy button and collection message based on state
+function renderFoggy() {
+   if (wordCollected === true) {
+    foggyButton.textContent = "✓ Foggy Collected";
 
+    if (alreadyCollectedClicked === true) {
+        collectionMessage.textContent = "You already collected Foggy!";
+    } else {
+        collectionMessage.textContent = "You collected Foggy!";
+    }
+
+}
+}
     foggyButton.addEventListener("click", () => {
 
         if (wordCollected === false) {
 
             wordCollected = true;
 
-            foggyButton.textContent = "✓ Foggy Collected";
-            collectionMessage.textContent = "You collected Foggy!";
-
+           renderFoggy();
         } else {
 
-            collectionMessage.textContent = "You already collected Foggy!";
+            alreadyCollectedClicked = true;
+
+           renderFoggy();
 
         }
 
