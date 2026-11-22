@@ -90,6 +90,14 @@ if (searchInput) {
 }
 
 // render: draws the vocabulary buttons, highlights the selected word, and shows its details
+// Does the word's name or definition contain the search text? Returns true or false.
+function matchesSearch(word) {
+
+    const text = (word.name + " " + word.definition).toLowerCase();
+
+    return text.includes(searchText.toLowerCase().trim());
+
+}
 function render() { 
 
 // Clear the old vocabulary buttons before redrawing
