@@ -4,6 +4,8 @@ let wordCollected = false;
 
 // selectedWord remembers which vocabulary word the player is viewing
 let selectedWord = null;
+// searchText remembers what the player types in the vocabulary search bar
+let searchText = "";
 
 // Wordfall Word Collection Data
 
@@ -78,12 +80,10 @@ const definitionContainer = document.getElementById("definition-content");
 const searchInput = document.getElementById("word-search");
 //Listen to the player tying in the search bar 
 if (searchInput) {
-
-    searchInput.addEventListener("input", (event) => {
-
-        console.log(event);
-
-        console.log(event.target.value);
+// Update the search state with what the player typed
+    searchInput.addEventListener("input", (event) => { searchText = event.target.value;
+ // Redraw the page based on the new state
+    render();
 
     });
 
