@@ -115,7 +115,8 @@ if (definitionContainer) {
 if (container && definitionContainer) {
 
 words.forEach(word => {
-
+// Only display words that match the player's search
+if (matchesSearch(word)) {
     // Create a button for each word
     const button = document.createElement("button");
 
@@ -153,7 +154,9 @@ render();
     });
 
     // Add the button to the inventory
-    container.appendChild(button);
+container.appendChild(button);
+
+    } // Close matchesSearch if statement
 
 });
 }
