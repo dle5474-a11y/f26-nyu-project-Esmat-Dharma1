@@ -114,9 +114,13 @@ if (definitionContainer) {
 // Go through each word in the array
 if (container && definitionContainer) {
 
+// Count how many vocabulary words match the search
+let shown = 0;
 words.forEach(word => {
+
 // Only display words that match the player's search
 if (matchesSearch(word)) {
+    shown++;
     // Create a button for each word
     const button = document.createElement("button");
 
@@ -159,6 +163,12 @@ container.appendChild(button);
     } // Close matchesSearch if statement
 
 });
+// Show a helpful message if no vocabulary words match
+if (shown === 0) {
+    const message = document.createElement("p");
+    message.textContent = "No matching words found. Try searching for another word or definition.";
+    container.appendChild(message);
+}
 }
 // Close the render function
 
