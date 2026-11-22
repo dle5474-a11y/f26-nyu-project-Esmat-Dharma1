@@ -4,6 +4,23 @@
 **Live site:** https://special-palm-tree-775prq97wg953xp4j-5500.app.github.dev/
 
 ## Project Log
+### Week 10 — [11/22/26]
+**Event Plan**
+- **User story:** As a middle-school student with dyslexia, I want to search through my collected vocabulary words and their definitions so that I can easily find and review words I have discovered while playing Wordfall.
+- **The event:**  I will use an input event on a search bar on the Word Collection page. This event fits because players can search for words as they type, without needing to press a separate search button.
+- **State:** I will create a new state variable called searchText, which starts as an empty string (""). This variable will remember what the player types into the search bar. I will also keep my existing Week 9 state for collecting words.
+- **My function:** I will create a function called matchesSearch(word) that answers the question: “Does this word’s name or definition contain the player’s search text?” The function takes a vocabulary word object as its parameter and returns true if it matches or false if it does not.
+
+**What changed:**
+**Why redraw on every event:** In 2–3 sentences, why does your handler call `render()` instead of changing the page itself?
+**What was hard, and what I tried:**
+**What happened when I tried to break it:**
+**What I learned or changed my mind about:**
+**Question for Joey:**
+**Next week's goal:**
+**AI use:**
+
+
 
 ### Week 9 — [11/15/26]
 
