@@ -74,6 +74,20 @@ const container = document.getElementById("content-container");
 // Find the definition container in HTML
 const definitionContainer = document.getElementById("definition-content");
 
+// Find the search bar in HTML 
+const searchInput = document.getElementById("word-search");
+//Listen to the player tying in the search bar 
+if (searchInput) {
+
+    searchInput.addEventListener("input", (event) => {
+
+        console.log(event);
+
+        console.log(event.target.value);
+
+    });
+
+}
 
 // render: draws the vocabulary buttons, highlights the selected word, and shows its details
 function render() { 
