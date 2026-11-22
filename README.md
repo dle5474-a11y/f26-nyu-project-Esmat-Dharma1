@@ -11,14 +11,14 @@
 - **State:** I will create a new state variable called searchText, which starts as an empty string (""). This variable will remember what the player types into the search bar. I will also keep my existing Week 9 state for collecting words.
 - **My function:** I will create a function called matchesSearch(word) that answers the question: “Does this word’s name or definition contain the player’s search text?” The function takes a vocabulary word object as its parameter and returns true if it matches or false if it does not.
 
-**What changed:**
-**Why redraw on every event:** In 2–3 sentences, why does your handler call `render()` instead of changing the page itself?
-**What was hard, and what I tried:**
-**What happened when I tried to break it:**
-**What I learned or changed my mind about:**
-**Question for Joey:**
-**Next week's goal:**
-**AI use:**
+**What changed:** This week, I added a search bar to my Word Collection page that allows players to search for vocabulary words using either their names or definitions. I used an input event to detect what the player types and stored that information in a new state variable called searchText. I also created a function called matchesSearch(word) that checks whether a word matches the search. The render() function now uses this function to display only matching vocabulary words. If no words match, the page displays a message encouraging the player to try another search.
+**Why redraw on every event:** I call render() every time the player types because the vocabulary collection needs to update based on the current search. Instead of having the event handler directly change the HTML, it updates searchText, and render() decides which vocabulary words should appear. This keeps the interaction organized and makes sure the page reflects the current state.
+**What was hard, and what I tried:** One challenge was understanding how the search event connected to my existing render() function. I also had trouble with an extra closing bracket when adding the if statement inside my vocabulary loop, which caused errors in my code. I went back through the brackets to understand which ones belonged to the function, loop, and conditional statement. 
+**What happened when I tried to break it:** When I first opened the page, all five vocabulary words appeared. Searching for “fog” displayed only Foggy, and searching for “mist” also displayed Foggy because its definition contains that word. Searching with capital letters, such as “FOG,” worked correctly. I initially thought searching with extra spaces was broken, but I discovered that .trim() removes spaces at the beginning and end of a search, not between letters. Searching for “xyz” displayed the no-results message, and clearing the search restored all five words. I also tested clicking a word after filtering, and its definition appeared correctly. When I changed the search to another word, the previous definition disappeared.
+**What I learned or changed my mind about:** I learned more about how events, state, and render() work together. I also better understand how a function can take a parameter and return true or false to help make decisions inside render(). Originally, I was considering adding an interaction with the cat or allowing players to choose missing words for dialogue. However, I decided to focus on the vocabulary search first because it helped me better understand the JavaScript concepts before developing more complicated gameplay interactions.
+**Question for Joey:** no specifc questions just any feedback is appreciated.
+**Next week's goal:** My next goal is to develop the interaction with the cat on the Choose Word page. I want players to click the cat to open a speech bubble containing dialogue and clues. Eventually, players will be able to choose words from their collection to complete missing dialogue and progress through the story. will most likely start this tomorrow.
+**AI use:** I used AI to help troubleshoot bracket errors and understand how .trim() and .toLowerCase() work. I tested the code myself in Live Server and used the browser Console to check the function’s results.
 
 
 
