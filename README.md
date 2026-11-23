@@ -20,7 +20,15 @@
 **Next week's goal:** My next goal is to develop the interaction with the cat on the Choose Word page. I want players to click the cat to open a speech bubble containing dialogue and clues. Eventually, players will be able to choose words from their collection to complete missing dialogue and progress through the story. will most likely start this tomorrow.
 **AI use:** I used AI to help troubleshoot bracket errors and understand how .trim() and .toLowerCase() work. I tested the code myself in Live Server and used the browser Console to check the function’s results.
 
+Additional Interaction — Kirbs’s Dialogue (November 22, 2026)
 
+I added an interactive dialogue feature to the Meet NPC page. Players can now click Kirbs the cat to reveal his dialogue and click again to hide it.
+
+I used a catSpeaking state variable and a renderCat() function to control whether the dialogue appears. This follows the same state → render pattern I learned in Assignment 9.
+
+I tested the interaction by clicking the cat ten times, refreshing the page, and checking that the original Foggy collection interaction still worked. All three tests passed without any issues.
+
+I also added accessibility attributes to the cat button so its expanded state updates when the dialogue opens or closes.
 
 ### Week 9 — [11/15/26]
 
