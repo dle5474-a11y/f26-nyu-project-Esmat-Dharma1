@@ -215,3 +215,27 @@ function renderFoggy() {
     });
 
 }
+// State: remembers whether the cat's dialogue is open
+let catSpeaking = false;
+
+// Find the cat button and dialogue
+const catButton = document.getElementById("cat-button");
+const catDialogue = document.getElementById("dialogue");
+
+// renderCat: shows or hides the cat's dialogue based on state
+function renderCat() {
+    if (catButton && catDialogue) {
+        catDialogue.hidden = !catSpeaking;
+        catButton.setAttribute("aria-expanded", String(catSpeaking));
+    }
+}
+// Clicking the cat changes the state and redraws the dialogue
+if (catButton && catDialogue) {
+    catButton.addEventListener("click", () => {
+        catSpeaking = !catSpeaking;
+        renderCat();
+    });
+
+    // Draw the dialogue when the page first loads
+    renderCat();
+}
