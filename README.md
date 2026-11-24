@@ -3,6 +3,46 @@
 **Latest mockups:** https://www.figma.com/design/GRxZ0VxuXMWeqFewEfSPhx/DharmaEsmat_Assignment4_Mockups.pdf?node-id=0-1&t=taWvDZ1c32jbhtnM-1
 **Live site:** https://special-palm-tree-775prq97wg953xp4j-5500.app.github.dev/
 
+USER STORY AUDIT
+
+MAIN STORY:
+
+Criterion 1: The player can read the story in short sections rather than seeing a large amount of text at once.
+  Status ✅ 
+  Notes: speach bubble allows to read texts in chunks 
+
+Criterion 2: The player is given at least two choices at specific points in the story.
+  Status  🟡
+  Notes: Modified to player techinicaly has at least three choices 
+
+Criterion 3: When the player selects a choice, the story changes based on their decision.
+  Status ❌ 
+  Notes: needs to be developed more 
+  
+
+USER TEST NOTES (filled in by the maker)
+Maker: Dharma Esmat
+Tester:
+
+Who the user is (one sentence): Middle-school students, particularly around 6th grade, with dyslexia who may find reading challenging or frustrating.
+
+Task 1 (full main story):
+  Completed?  Yes / With trouble / No
+  Where they hesitated or got stuck:
+  What they said they expected:
+
+Task 2:
+  Completed?  Yes / With trouble / No
+  Where they hesitated or got stuck:
+  What they said they expected:
+
+Task 3 (optional):
+  Completed?  Yes / With trouble / No
+  Where they hesitated or got stuck:
+  What they said they expected:
+
+Tester's one-line takeaway (ask them at the end):
+"The one thing I'd fix first is..."
 ## Project Log
 ### Week 10 — [11/22/26]
 **Event Plan**
